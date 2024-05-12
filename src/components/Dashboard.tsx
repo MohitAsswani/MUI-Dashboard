@@ -32,8 +32,7 @@ const Dashboard: React.FC = () => {
   const handleEditButtonClick = (entryId: number) => {
     const storedData = localStorage.getItem('dataEntries');
     const data = storedData ? JSON.parse(storedData) : [];
-
-    const { Input, type, label, Head, changesCount } = data ? data[entryId] : dataEntries[entryId];
+    const { Input, type, label, Head, changesCount } = data?.length>1 ? data[entryId] : dataEntries[entryId];
     setFormData({ Input, type, label, Head, changesCount });
     setDialogOpen(true);
   };
