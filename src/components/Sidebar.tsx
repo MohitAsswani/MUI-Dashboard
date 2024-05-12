@@ -1,4 +1,5 @@
 import { styled } from '@mui/material/styles';
+import "../App.css"
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
@@ -35,10 +36,7 @@ const SidebarIcon = styled(ListItem)(({ theme }) => ({
   display: 'flex',
   padding: '20px',
   color: '#fff',
-  '& .userIcon': {
-    position: 'absolute !important',
-    bottom: '0',
-  },
+
   '& .MuiListItemIcon-root': {
     justifyContent: 'center',
   },
@@ -85,9 +83,9 @@ const Sidebar = () => {
         </List>
         <Divider />
         {/* User Avatar */}
-        <SidebarIcon >
+        <SidebarIcon className={"userIcon"}>
           <Tooltip title="User Profile" placement="right">
-            <ListItemIcon className="userIcon">
+            <ListItemIcon >
               <AccountCircleIcon style={{ color: '#6894F1' }} />
             </ListItemIcon>
           </Tooltip>
