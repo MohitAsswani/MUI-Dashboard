@@ -9,7 +9,8 @@ const App = () => {
       <div style={{ display: 'flex',background:"#1441A5" }}>
         <Sidebar />
         <Routes>
-          <Route path="/"  element={<Home/>} />
+          <Route path="/"  element={<Dashboard/>} />
+          <Route path="/home"  element={<Home />} />
           <Route path="/dashboard" element={<Dashboard/>} />
         </Routes>
       </div>
