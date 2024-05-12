@@ -1,10 +1,10 @@
 // DashboardTable.tsx
 import React, { useEffect, useState } from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography, Paper, TablePagination, Button } from '@mui/material';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography, Paper, TablePagination } from '@mui/material';
 import FlagIcon from '@mui/icons-material/Flag';
 import EditIcon from '@mui/icons-material/Edit';
 import { dataEntries } from '../common';
-import { makeStyles, styled } from "@mui/styles";
+import { makeStyles } from "@mui/styles";
 import { Theme } from "@mui/material/styles";
 
 const useStyles = makeStyles((theme:Theme) => ({

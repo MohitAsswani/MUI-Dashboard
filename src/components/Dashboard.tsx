@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Typography, Box } from '@mui/material';
 import Navbar from './Navbar';
 import { makeStyles } from "@mui/styles";
-import { createSpacing } from '@mui/system';
 import DashboardTable from './DashboardTable';
 import EditDialog from './EditDialog';
 import { dataEntries } from '../common';

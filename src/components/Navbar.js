@@ -43,7 +43,7 @@ function Navbar() {
                 className={classes.searchInput}
                 placeholder="Search Coming Soon"
               />
-              <img src={searchIco} className={classes.searchIpIco} />
+              <img src={searchIco} alt={"search icon"} className={classes.searchIpIco} />
             </span>
           </span>
     </div>
