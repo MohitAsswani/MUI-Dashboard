@@ -25,15 +25,13 @@ const EditDialog: React.FC<{
     const { value } = event.target;
     const fieldType = formData.type;
     
-    // Validate input based on field type
     let isValid = true;
     if (fieldType === 'number') {
-      isValid = /^\d+$/.test(value); // Check if value is a number
+      isValid = /^\d+$/.test(value); 
     } else if (fieldType === 'email') {
-      isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value); // Check if value is a valid email
+      isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value); 
     }
     
-    // Update form data and errors
     setFormData((prevData: any) => ({
       ...prevData,
       Input: Array.isArray(prevData.Input)
@@ -45,12 +43,10 @@ const EditDialog: React.FC<{
   };
 
   const handleSubmitForm = () => {
-    // Retrieve dataEntries from local storage or use the initial dataEntries if not present
     const entry = localStorage.getItem('dataEntries') || JSON.stringify(dataEntries);
     const updatedDataEntries = (JSON.parse(entry) as any[]).map((entry: any) => {
 
       if (entry.Head === formData.Head) {
-        // Update the entry with the modified formData
         return {
           ...entry,
           Input: formData.Input,
@@ -85,7 +81,7 @@ const EditDialog: React.FC<{
               <PlInput
                 label={formData.label ? formData.label[index] : `Field ${index + 1}`}
                 value={value}
-                name={`field${index}`} // Assign unique name to each input field
+                name={`field${index}`} 
                 onChange={(event: React.ChangeEvent<HTMLInputElement>) => handleInputChange(event, index)}
                 id={''}
                 error={errors[index]}

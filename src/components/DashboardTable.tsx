@@ -1,4 +1,3 @@
-// DashboardTable.tsx
 import React, { useEffect, useState } from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography, Paper, TablePagination } from '@mui/material';
 import FlagIcon from '@mui/icons-material/Flag';

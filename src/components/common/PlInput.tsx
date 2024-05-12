@@ -162,6 +162,6 @@ PlInput.propTypes = {
   helperText: PropTypes.string,
   maxRows: PropTypes.string,
   disabled: PropTypes.bool,
-  error: PropTypes.bool, // Add error prop to PropTypes
+  error: PropTypes.bool,
 };
 export default PlInput;
